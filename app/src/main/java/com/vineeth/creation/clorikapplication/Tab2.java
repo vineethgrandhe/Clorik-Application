@@ -59,48 +59,7 @@ public class Tab2 extends Fragment {
                 .load(url)
                 .fit()
                 .into(i);
-
-        //DownloadImageWithURLTask downloadTask = new DownloadImageWithURLTask(i);
-        //downloadTask.execute(url);
-
-        //WebView webView = (WebView) rootView.findViewById(R.id.webview);
-        //webView.setWebViewClient(new WebViewClient());
-        //webView.getSettings().setJavaScriptEnabled(true);
-        //webView.getSettings().setDomStorageEnabled(true);
-        //webView.getSettings().setUseWideViewPort(true);
-        //webView.loadUrl(url);
         return rootView;
     }
-    /*class DownloadImageWithURLTask extends AsyncTask<String, Void, Bitmap> {
-        ImageView bmImage;
-        public DownloadImageWithURLTask(ImageView bmImage) {
-            this.bmImage = bmImage;
-        }
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            pbar.setVisibility(View.VISIBLE);
-        }
-
-        protected Bitmap doInBackground(String... urls) {
-            String pathToFile = urls[0];
-            Bitmap bitmap = null;
-            try {
-                InputStream in = new java.net.URL(pathToFile).openStream();
-                bitmap = BitmapFactory.decodeStream(in);
-            } catch (Exception e) {
-                Log.e("Error", e.getMessage());
-                e.printStackTrace();
-            }
-            return bitmap;
-        }
-        protected void onPostExecute(Bitmap result) {
-            bmImage.setImageBitmap(result);
-            pbar.setVisibility(View.GONE);
-        }
-    }
-}
-*/
 }
 
